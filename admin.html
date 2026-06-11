@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Админка шаблона - Remont Route</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <header class="admin-hero">
+        <a class="button ghost dark" href="index.html">Назад на сайт</a>
+        <div>
+          <p class="eyebrow">Панель управления</p>
+          <h1>Редактирование шаблона</h1>
+          <p>Эта демо-админка сохраняет данные в браузере и показывает, как покупатель будет управлять сайтом без кода.</p>
+        </div>
+      </header>
+
+      <section class="admin-grid">
+        <form class="admin-card" id="mainForm">
+          <h2>Основное</h2>
+          <label>Название<input name="brandName" type="text"></label>
+          <label>Город<input name="city" type="text"></label>
+          <label>Телефон<input name="phone" type="text"></label>
+          <label>Стиль оформления
+            <select name="theme">
+              <option value="route">Route: современный теплый</option>
+              <option value="studio">Studio: светлый премиальный</option>
+              <option value="mono">Mono: строгий графитовый</option>
+            </select>
+          </label>
+          <label>Hero-изображение<input name="heroImage" type="text"></label>
+          <label>Выбрать hero-фото<input data-upload-target="heroImage" type="file" accept="image/*"></label>
+          <label>Фото “до”<input name="beforeImage" type="text"></label>
+          <label>Выбрать фото “до”<input data-upload-target="beforeImage" type="file" accept="image/*"></label>
+          <label>Фото “после”<input name="afterImage" type="text"></label>
+          <label>Выбрать фото “после”<input data-upload-target="afterImage" type="file" accept="image/*"></label>
+          <label>Главный заголовок<textarea name="headline"></textarea></label>
+          <label>Описание<textarea name="lead"></textarea></label>
+          <label>Текст кнопки<input name="ctaText" type="text"></label>
+          <label>Заголовок формы<input name="contactTitle" type="text"></label>
+        </form>
+
+        <section class="admin-card">
+          <h2>Цифры доверия</h2>
+          <div class="repeater" id="trustEditor"></div>
+        </section>
+
+        <section class="admin-card wide">
+          <h2>Пакеты ремонта</h2>
+          <div class="repeater three" id="packagesEditor"></div>
+        </section>
+
+        <section class="admin-card wide">
+          <h2>Объекты портфолио</h2>
+          <div class="repeater three" id="projectsEditor"></div>
+        </section>
+      </section>
+
+      <section class="admin-actions">
+        <button class="button primary" id="adminSave" type="button">Сохранить изменения</button>
+        <button class="button ghost dark" id="adminExport" type="button">Экспорт JSON</button>
+        <button class="button ghost dark" id="adminReset" type="button">Сбросить демо</button>
+        <a class="button ghost dark" href="guide.html">Инструкция</a>
+        <a class="button ghost dark" href="sell.html">Страница продажи</a>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Демо-шаблон сайта для компании по ремонту квартир: калькулятор, портфолио, пакеты услуг и редактируемый контент.">
+    <title>Remont Route - шаблон сайта ремонта квартир</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Remont Route">
+        <span class="brand-mark">RR</span>
+        <span>
+          <strong data-edit="brandName">Remont Route</strong>
+          <small data-edit="city">Москва и область</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#calculator">Расчет</a>
+        <a href="services.html">Услуги</a>
+        <a href="#process">Этапы</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#projects">Объекты</a>
+        <a href="admin.html">Админка</a>
+        <a href="leads.html">Заявки</a>
+        <a href="guide.html">Инструкция</a>
+        <a href="sell.html">Купить</a>
+      </nav>
+      <a class="topbar-call" data-edit="phone" href="tel:+74951234567">+7 495 123-45-67</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Первый экран">
+        <img class="hero-image" data-image="heroImage" src="assets/renovation-hero.png" alt="Современная квартира после ремонта">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Шаблон для ремонтной компании</p>
+            <h1 data-edit="headline">Ремонт квартиры с понятным маршрутом, сметой и сроками</h1>
+            <p data-edit="lead">Покажите клиенту стоимость, этапы и результат еще до звонка. Такой сайт продает не обещание, а предсказуемый процесс.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#calculator">Рассчитать проект</a>
+              <a class="button ghost" href="services.html">Услуги</a>
+              <a class="button ghost" href="#projects">Смотреть объекты</a>
+            </div>
+          </div>
+
+          <form class="calculator" id="calculator" aria-label="Калькулятор ремонта">
+            <div class="calc-head">
+              <span>Быстрый расчет</span>
+              <strong id="calcTotal">1 680 000 ₽</strong>
+            </div>
+            <label>
+              Площадь, м²
+              <input id="areaInput" type="range" min="28" max="140" value="56">
+              <span class="range-value"><output id="areaOutput">56</output> м²</span>
+            </label>
+            <fieldset>
+              <legend>Уровень ремонта</legend>
+              <div class="segments">
+                <label><input type="radio" name="level" value="18000">Косметический</label>
+                <label><input type="radio" name="level" value="30000" checked>Под ключ</label>
+                <label><input type="radio" name="level" value="52000">Дизайнерский</label>
+              </div>
+            </fieldset>
+            <div class="calc-result">
+              <span>Срок: <b id="calcDays">74 дня</b></span>
+              <span>Старт: <b>после замера</b></span>
+            </div>
+            <a class="button primary full" data-edit="ctaText" href="#contact">Получить точную смету</a>
+          </form>
+        </div>
+      </section>
+
+      <section class="trust-strip" id="trustStrip" aria-label="Преимущества">
+      </section>
+
+      <section class="section two-col" id="process">
+        <div>
+          <p class="eyebrow">Нестандартное решение</p>
+          <h2>Маршрут ремонта вместо скучного списка услуг</h2>
+          <p>Клиент видит понятную траекторию: от замера до сдачи объекта. Это снижает тревогу, объясняет цену и помогает быстрее оставить заявку.</p>
+        </div>
+        <div class="timeline">
+          <article><span>01</span><h3>Диагностика</h3><p>Замер, фотофиксация, пожелания, ограничения дома.</p></article>
+          <article><span>02</span><h3>Смета</h3><p>Материалы, работы, сроки и варианты экономии.</p></article>
+          <article><span>03</span><h3>Производство</h3><p>Черновые работы, инженерия, отделка, контроль качества.</p></article>
+          <article><span>04</span><h3>Сдача</h3><p>Клининг, акты, гарантия и рекомендации по уходу.</p></article>
+        </div>
+      </section>
+
+      <section class="section compare" aria-label="До и после">
+        <div>
+          <p class="eyebrow">До / После</p>
+          <h2>Блок для вау-эффекта без тяжелой галереи</h2>
+          <p>В готовой версии сюда можно подключить реальные фотографии клиента. Сейчас это визуальный модуль, который показывает идею.</p>
+        </div>
+        <div class="before-after" id="beforeAfter">
+          <div class="before-layer"></div>
+          <div class="after-layer"></div>
+          <input id="compareRange" type="range" min="12" max="88" value="52" aria-label="Сравнение до и после">
+          <span class="compare-badge before">До</span>
+          <span class="compare-badge after">После</span>
+        </div>
+      </section>
+
+      <section class="section" id="packages">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Пакеты</p>
+            <h2>Три понятных входа в продажу</h2>
+          </div>
+          <a class="button ghost dark" href="#contact">Обсудить объект</a>
+        </div>
+        <div class="cards" id="packageGrid">
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Портфолио</p>
+            <h2>Карточки объектов, которые легко менять</h2>
+          </div>
+        </div>
+        <div class="project-grid" id="projectGrid">
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Заявка</p>
+          <h2 data-edit="contactTitle">Получите смету и маршрут ремонта</h2>
+          <p>Форма уже учитывает российскую специфику: согласие на обработку персональных данных, телефон, мессенджеры и будущую интеграцию с Метрикой.</p>
+        </div>
+        <form class="lead-form" id="leadForm">
+          <input name="name" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
+          <input name="phone" type="tel" placeholder="+7 ___ ___-__-__" aria-label="Телефон" required>
+          <select name="service" aria-label="Тип ремонта">
+            <option>Ремонт под ключ</option>
+            <option>Косметический ремонт</option>
+            <option>Дизайнерский ремонт</option>
+          </select>
+          <label class="consent"><input name="consent" type="checkbox" checked required> Согласен на обработку персональных данных</label>
+          <button class="button primary full" type="submit">Отправить заявку</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="editor" id="editor" aria-label="Панель редактирования">
+      <a class="admin-link" href="admin.html">Админка</a>
+      <a class="admin-link services" href="services.html">Услуги</a>
+      <a class="admin-link leads" href="leads.html">Заявки</a>
+      <a class="admin-link buy" href="sell.html">Купить</a>
+      <button class="editor-toggle" id="editorToggle" type="button">Редактировать</button>
+      <div class="editor-panel">
+        <h2>Контент шаблона</h2>
+        <label>Название<input data-field="brandName" type="text"></label>
+        <label>Город<input data-field="city" type="text"></label>
+        <label>Телефон<input data-field="phone" type="text"></label>
+        <label>Заголовок<textarea data-field="headline"></textarea></label>
+        <label>Описание<textarea data-field="lead"></textarea></label>
+        <label>Кнопка CTA<input data-field="ctaText" type="text"></label>
+        <label>Заголовок формы<input data-field="contactTitle" type="text"></label>
+        <div class="editor-actions">
+          <button class="button primary" id="saveContent" type="button">Сохранить</button>
+          <button class="button ghost dark" id="exportContent" type="button">Экспорт JSON</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <span>Remont Route template</span>
+      <a href="sell.html">Купить шаблон</a>
+      <a href="services.html">Услуги</a>
+      <a href="leads.html">Заявки</a>
+      <a href="guide.html">Инструкция покупателю</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="consent.html">Согласие на обработку данных</a>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

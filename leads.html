@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заявки - Remont Route</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <header class="admin-hero">
+        <a class="button ghost dark" href="index.html">Назад на сайт</a>
+        <div>
+          <p class="eyebrow">Демо-CRM</p>
+          <h1>Заявки с сайта</h1>
+          <p>Здесь покупатель видит, как могут собираться обращения. В демо-версии заявки сохраняются в браузере, а в рабочей версии их можно отправлять в Telegram, CRM, почту или таблицу.</p>
+        </div>
+      </header>
+
+      <section class="lead-toolbar">
+        <button class="button primary" id="exportLeads" type="button">Экспорт CSV</button>
+        <button class="button ghost dark" id="clearLeads" type="button">Очистить демо</button>
+        <a class="button ghost dark" href="admin.html">Админка</a>
+      </section>
+
+      <section class="leads-list" id="leadsList" aria-live="polite"></section>
+    </main>
+
+    <script src="leads.js"></script>
+  </body>
+</html>
