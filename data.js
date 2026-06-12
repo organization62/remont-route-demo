@@ -1,11 +1,11 @@
-window.SITE_CONTENT = {
+﻿window.SITE_CONTENT = {
   brandName: "Remont Route",
   city: "Москва и область",
   phone: "+7 495 123-45-67",
   theme: "route",
-  heroImage: "assets/renovation-hero.png",
-  beforeImage: "assets/renovation-before.png",
-  afterImage: "assets/renovation-hero.png",
+  heroImage: "renovation-hero.png",
+  beforeImage: "renovation-before.png",
+  afterImage: "renovation-hero.png",
   headline: "Ремонт квартиры с понятным маршрутом, сметой и сроками",
   lead: "Покажите клиенту стоимость, этапы и результат еще до звонка. Такой сайт продает не обещание, а предсказуемый процесс.",
   ctaText: "Получить точную смету",
@@ -38,20 +38,21 @@ window.SITE_CONTENT = {
     {
       name: "ЖК Символ",
       area: "64 м²",
-      image: "assets/renovation-hero.png",
+      image: "renovation-hero.png",
       text: "Капитальный ремонт за 82 дня, бюджет 2,1 млн ₽."
     },
     {
       name: "Сталинка на Соколе",
       area: "48 м²",
-      image: "assets/renovation-hero.png",
+      image: "renovation-hero.png",
       text: "Обновление инженерии, паркет, кухня под заказ."
     },
     {
       name: "Апартаменты у метро",
       area: "37 м²",
-      image: "assets/renovation-hero.png",
+      image: "renovation-hero.png",
       text: "Быстрый ремонт под сдачу с мебельной комплектацией."
     }
   ]
 };
+
