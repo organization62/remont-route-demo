@@ -1,11 +1,13 @@
-# Remont Route
+# Контур Строй
 
-Демо-шаблон сайта для компании по ремонту квартир в России.
+Готовый сайт для компании по ремонту и отделке квартир, офисов, домов и коттеджей в России.
 
 ## Что внутри
 
-- интерактивный калькулятор стоимости ремонта;
-- блок маршрута проекта;
+- интерактивный калькулятор стоимости ремонта и отделки;
+- выбор типа объекта: квартира, офис, дом, коттедж;
+- блок маршрута проекта и “Штаб ремонта”;
+- журнал прораба со скрытыми работами, рисками и следующим этапом;
 - визуальный модуль "до / после";
 - пакеты услуг;
 - карточки объектов;
@@ -18,9 +20,10 @@
 - расширенная страница продажи с FAQ, сравнением тарифов и блоком “что можно менять без кода”;
 - управление изображениями hero, до/после и портфолио;
 - демо-CRM `leads.html` с экспортом заявок в CSV;
-- SEO-страницы услуг: `services.html`, `renovation-turnkey.html`, `bathroom-renovation.html`, `kitchen-renovation.html`, `new-build-renovation.html`, `secondary-renovation.html`, `prices.html`;
+- SEO-страницы услуг: `services.html`, `renovation-turnkey.html`, `office-renovation.html`, `home-renovation.html`, `cottage-renovation.html`, `bathroom-renovation.html`, `kitchen-renovation.html`, `new-build-renovation.html`, `secondary-renovation.html`, `prices.html`;
 - упаковочные документы: `LICENSE.txt`, `INSTALL.md`, `PRODUCT.md`, `CHANGELOG.md`, `SUPPORT.md`;
 - быстрый старт: `START_HERE.md`;
+- тексты для продажи: `SALES_COPY.md`;
 - экспорт контента в JSON для будущей админки или CMS.
 
 ## Как открыть

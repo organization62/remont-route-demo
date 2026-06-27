@@ -6,6 +6,7 @@ const mainForm = document.querySelector("#mainForm");
 const trustEditor = document.querySelector("#trustEditor");
 const packagesEditor = document.querySelector("#packagesEditor");
 const projectsEditor = document.querySelector("#projectsEditor");
+const adminStatus = document.querySelector("#adminStatus");
 
 function field(name, value, label, tag = "input", type = "text") {
   const safeValue = String(value ?? "").replaceAll('"', "&quot;");
@@ -98,7 +99,7 @@ function downloadJson(data) {
 document.querySelector("#adminSave").addEventListener("click", () => {
   draft = collectDraft();
   localStorage.setItem(contentKey, JSON.stringify(draft));
-  location.href = "index.html";
+  if (adminStatus) adminStatus.textContent = "Изменения сохранены. Можно открыть сайт и проверить результат.";
 });
 
 document.querySelector("#adminExport").addEventListener("click", () => {
@@ -110,6 +111,7 @@ document.querySelector("#adminReset").addEventListener("click", () => {
   draft = { ...adminDefaults };
   fillMainForm();
   renderRepeaters();
+  if (adminStatus) adminStatus.textContent = "Демо-данные сброшены до исходной версии.";
 });
 
 document.addEventListener("change", async (event) => {
@@ -126,12 +128,14 @@ document.addEventListener("change", async (event) => {
   if (mainTarget) {
     const target = mainForm.elements[mainTarget];
     if (target) target.value = dataUrl;
+    if (adminStatus) adminStatus.textContent = "Фото добавлено. Не забудьте сохранить изменения.";
   }
 
   if (listTarget) {
     const card = input.closest(".admin-mini");
     const target = card?.querySelector(`[data-name="${listTarget}"]`);
     if (target) target.value = dataUrl;
+    if (adminStatus) adminStatus.textContent = "Фото объекта добавлено. Не забудьте сохранить изменения.";
   }
 });
 

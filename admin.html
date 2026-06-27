@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Админка шаблона - Remont Route</title>
+    <title>Админка сайта - Контур Строй</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="admin-page">
@@ -11,11 +11,26 @@
       <header class="admin-hero">
         <a class="button ghost dark" href="index.html">Назад на сайт</a>
         <div>
-          <p class="eyebrow">Панель управления</p>
-          <h1>Редактирование шаблона</h1>
-          <p>Эта демо-админка сохраняет данные в браузере и показывает, как покупатель будет управлять сайтом без кода.</p>
+          <p class="eyebrow">Демо-панель управления</p>
+          <h1>Редактирование сайта Контур Строй</h1>
+          <p>Здесь можно без кода изменить название, город, телефон, главный экран, фотографии, пакеты ремонта, цифры доверия и объекты портфолио. В этой версии данные сохраняются локально в браузере.</p>
         </div>
       </header>
+
+      <section class="admin-notice" aria-label="Как работает демо-админка">
+        <article>
+          <span>Локальное редактирование</span>
+          <p>Изменения видны на этом компьютере после сохранения. Для постоянной админки на хостинге нужен backend, CMS или подключение к CRM.</p>
+        </article>
+        <article>
+          <span>Фото из компьютера</span>
+          <p>Можно выбрать изображения для первого экрана, блока до/после и карточек портфолио. Они сохраняются в браузере как демонстрация.</p>
+        </article>
+        <article>
+          <span>Экспорт</span>
+          <p>Кнопка экспорта сохраняет JSON-файл с контентом, чтобы перенести настройки или передать их разработчику.</p>
+        </article>
+      </section>
 
       <section class="admin-grid">
         <form class="admin-card" id="mainForm">
@@ -62,8 +77,10 @@
         <button class="button primary" id="adminSave" type="button">Сохранить изменения</button>
         <button class="button ghost dark" id="adminExport" type="button">Экспорт JSON</button>
         <button class="button ghost dark" id="adminReset" type="button">Сбросить демо</button>
+        <a class="button ghost dark" href="index.html?demo=1">Посмотреть с панелью</a>
         <a class="button ghost dark" href="guide.html">Инструкция</a>
         <a class="button ghost dark" href="sell.html">Страница продажи</a>
+        <p class="admin-status" id="adminStatus" role="status"></p>
       </section>
     </main>
 
