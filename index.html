@@ -2979,8 +2979,28 @@ updateDealTimer();
 setInterval(updateDealTimer, 1000);
 
 </script>
-  <div style="position:fixed;right:12px;bottom:12px;z-index:99999;background:#ffffff;color:#111;padding:8px 12px;border:1px solid #111;border-radius:999px;font:700 13px Arial,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.18)">Версия 0.9.1 - до/после исправлено</div>
+  <script>
+(function () {
+  var map = window.EMBEDDED_ASSETS || {};
+  var before = document.querySelector(".before-layer");
+  var after = document.querySelector(".after-layer");
+  var beforeImage = map["assets/renovation-before.png"];
+  var afterImage = map["assets/renovation-living.png"] || map["assets/renovation-hero.png"];
+  if (before && beforeImage) {
+    before.style.backgroundImage = 'linear-gradient(135deg, rgba(69, 64, 58, 0.22), rgba(32, 33, 31, 0.36)), url("' + beforeImage + '")';
+    before.style.backgroundSize = "cover";
+    before.style.backgroundPosition = "center";
+  }
+  if (after && afterImage) {
+    after.style.backgroundImage = 'linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(220, 230, 217, 0.18)), url("' + afterImage + '")';
+    after.style.backgroundSize = "cover";
+    after.style.backgroundPosition = "center";
+    after.style.width = "52%";
+  }
+})();
+</script>
 </body>
 </html>
+
 
 
