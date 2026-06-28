@@ -2697,8 +2697,7 @@ window.EMBEDDED_ASSETS = {
   });
 })();
 </script>
-<script>
-const defaults = window.SITE_CONTENT;
+<script>(function(){try{var saved=JSON.parse(localStorage.getItem("remontRouteContent")||"{}");delete saved.heroImage;delete saved.beforeImage;delete saved.afterImage;delete saved.projects;localStorage.setItem("remontRouteContent",JSON.stringify(saved));}catch(error){}})();</script><script>const defaults = window.SITE_CONTENT;
 
 const money = new Intl.NumberFormat("ru-RU");
 const areaInput = document.querySelector("#areaInput");
@@ -2980,6 +2979,8 @@ updateDealTimer();
 setInterval(updateDealTimer, 1000);
 
 </script>
-  </body>
+  <div style="position:fixed;right:12px;bottom:12px;z-index:99999;background:#ffffff;color:#111;padding:8px 12px;border:1px solid #111;border-radius:999px;font:700 13px Arial,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.18)">Версия 0.9.1 - до/после исправлено</div>
+</body>
 </html>
+
 
